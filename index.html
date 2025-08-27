@@ -92,3 +92,280 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Futebol: Teste Seus Conhecimentos!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #004d99;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        .intro-text {
+            background-color: #e6f7ff;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .intro-text h2 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .question {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .question:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .question p {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 0;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+        .options label:hover {
+            background-color: #e9e9e9;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: none; /* Inicia oculto */
+        }
+        .correct {
+            color: #28a745;
+        }
+        .incorrect {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Quiz de Futebol: Teste Seus Conhecimentos!</h1>
+    </header>
+
+    <div class="intro-text">
+        <h2>O Que É o Futebol?</h2>
+        <p>O futebol, conhecido como o esporte mais popular do mundo, tem suas origens mais remotas ligadas à China. No entanto, o esporte moderno como conhecemos hoje foi formalizado na Inglaterra, no século XIX. Em 1863, a <strong>Football Association</strong> foi criada em Londres, estabelecendo as primeiras regras que separaram o futebol do rugby, limitando o uso das mãos. O esporte se espalhou rapidamente pelo mundo e chegou ao Brasil em 1894, trazido por Charles Miller.</p>
+        <p>Hoje, o futebol é um esporte coletivo disputado por duas equipes de 11 jogadores, em um campo retangular com um gol em cada extremidade. O objetivo principal é marcar gols, ou seja, fazer a bola cruzar a linha do gol adversário. As partidas são divididas em dois tempos de 45 minutos, com um intervalo de 15 minutos.</p>
+    </div>
+
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Qual jogador é o maior artilheiro de todas as Copas do Mundo?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) Pelé</label>
+                <label><input type="radio" name="q1" value="b"> b) Miroslav Klose</label>
+                <label><input type="radio" name="q1" value="c"> c) Ronaldo Fenômeno</label>
+                <label><input type="radio" name="q1" value="d"> d) Lionel Messi</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Qual clube de futebol é o maior campeão da UEFA Champions League?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> a) Barcelona</label>
+                <label><input type="radio" name="q2" value="b"> b) Bayern de Munique</label>
+                <label><input type="radio" name="q2" value="c"> c) Real Madrid</label>
+                <label><input type="radio" name="q2" value="d"> d) Manchester United</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Em que ano o Brasil conquistou seu primeiro título de Copa do Mundo?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> a) 1950</label>
+                <label><input type="radio" name="q3" value="b"> b) 1958</label>
+                <label><input type="radio" name="q3" value="c"> c) 1962</label>
+                <label><input type="radio" name="q3" value="d"> d) 1970</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. Qual jogador é conhecido pela "Mão de Deus" em uma partida de Copa do Mundo?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> a) Diego Maradona</label>
+                <label><input type="radio" name="q4" value="b"> b) Thierry Henry</label>
+                <label><input type="radio" name="q4" value="c"> c) Luis Suárez</label>
+                <label><input type="radio" name="q4" value="d"> d) Roberto Baggio</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Qual país sediou a Copa do Mundo de 2014?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> a) África do Sul</label>
+                <label><input type="radio" name="q5" value="b"> b) Alemanha</label>
+                <label><input type="radio" name="q5" value="c"> c) Brasil</label>
+                <label><input type="radio" name="q5" value="d"> d) Rússia</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. Qual é o nome do troféu da Copa do Mundo?</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> a) Taça Jules Rimet</label>
+                <label><input type="radio" name="q6" value="b"> b) Troféu Copa do Mundo da FIFA</label>
+                <label><input type="radio" name="q6" value="c"> c) Taça FIFA</label>
+                <label><input type="radio" name="q6" value="d"> d) Taça Ouro</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. Qual é o único país a ter participado de todas as Copas do Mundo?</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> a) Brasil</label>
+                <label><input type="radio" name="q7" value="b"> b) Alemanha</label>
+                <label><input type="radio" name="q7" value="c"> c) Itália</label>
+                <label><input type="radio" name="q7" value="d"> d) Argentina</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. Qual jogador é o maior vencedor da Bola de Ouro?</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> a) Lionel Messi</label>
+                <label><input type="radio" name="q8" value="b"> b) Cristiano Ronaldo</label>
+                <label><input type="radio" name="q8" value="c"> c) Johan Cruyff</label>
+                <label><input type="radio" name="q8" value="d"> d) Michel Platini</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. Qual técnico ficou conhecido por popularizar o estilo de jogo "tiki-taka"?</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> a) José Mourinho</label>
+                <label><input type="radio" name="q9" value="b"> b) Arsène Wenger</label>
+                <label><input type="radio" name="q9" value="c"> c) Pep Guardiola</label>
+                <label><input type="radio" name="q9" value="d"> d) Jürgen Klopp</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. Qual time venceu a Copa do Mundo de 2018?</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> a) Alemanha</label>
+                <label><input type="radio" name="q10" value="b"> b) Croácia</label>
+                <label><input type="radio" name="q10" value="c"> c) França</label>
+                <label><input type="radio" name="q10" value="d"> d) Bélgica</label>
+            </div>
+        </div>
+
+        <button type="submit">Ver Meu Resultado</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+        
+        const answers = {
+            q1: 'b',
+            q2: 'c',
+            q3: 'b',
+            q4: 'a',
+            q5: 'c',
+            q6: 'b',
+            q7: 'a',
+            q8: 'a',
+            q9: 'c',
+            q10: 'c'
+        };
+
+        let score = 0;
+        const totalQuestions = Object.keys(answers).length;
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = ''; // Limpa o resultado anterior
+
+        for (let i = 1; i <= totalQuestions; i++) {
+            const questionName = 'q' + i;
+            const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+            
+            const p = document.createElement('p');
+            p.innerHTML = `${i}. Sua resposta: ${selectedAnswer ? selectedAnswer.value.toUpperCase() : 'Não respondida'}. Resposta correta: ${answers[questionName].toUpperCase()}`;
+            
+            if (selectedAnswer && selectedAnswer.value === answers[questionName]) {
+                score++;
+                p.classList.add('correct');
+            } else {
+                p.classList.add('incorrect');
+            }
+            resultDiv.appendChild(p);
+        }
+
+        const finalScore = document.createElement('h3');
+        finalScore.innerHTML = `Sua pontuação final: ${score} de ${totalQuestions}`;
+        resultDiv.prepend(finalScore);
+        resultDiv.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
