@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Futebol: Teste Seus Conhecimentos!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #004d99;
+        }
+        .question {
+            margin-bottom: 20px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .options label:hover {
+            background-color: #f0f8ff;
+        }
+        .answer {
+            font-weight: bold;
+            color: #008000;
+        }
+        .correct {
+            color: #008000;
+        }
+        .incorrect {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Quiz de Futebol: Teste Seus Conhecimentos!</h1>
+    <p>Se você acha que sabe tudo sobre o mundo da bola, chegou a hora de provar!</p>
+
+    <div class="question">
+        <p>1. Qual jogador é o maior artilheiro de todas as Copas do Mundo?</p>
+        <div class="options">
+            <label><input type="radio" name="q1"> a) Pelé</label>
+            <label><input type="radio" name="q1" data-answer="true"> b) Miroslav Klose</label>
+            <label><input type="radio" name="q1"> c) Ronaldo Fenômeno</label>
+            <label><input type="radio" name="q1"> d) Lionel Messi</label>
+        </div>
+        <p class="answer" style="display:none;">Resposta correta: b) Miroslav Klose</p>
+    </div>
+
+    <div class="question">
+        <p>2. Qual clube de futebol é o maior campeão da UEFA Champions League?</p>
+        <div class="options">
+            <label><input type="radio" name="q2"> a) Barcelona</label>
+            <label><input type="radio" name="q2"> b) Bayern de Munique</label>
+            <label><input type="radio" name="q2" data-answer="true"> c) Real Madrid</label>
+            <label><input type="radio" name="q2"> d) Manchester United</label>
+        </div>
+        <p class="answer" style="display:none;">Resposta correta: c) Real Madrid</p>
+    </div>
+
+    <div class="question">
+        <p>3. Em que ano o Brasil conquistou seu primeiro título de Copa do Mundo?</p>
+        <div class="options">
+            <label><input type="radio" name="q3"> a) 1950</label>
+            <label><input type="radio" name="q3" data-answer="true"> b) 1958</label>
+            <label><input type="radio" name="q3"> c) 1962</label>
+            <label><input type="radio" name="q3"> d) 1970</label>
+        </div>
+        <p class="answer" style="display:none;">Resposta correta: b) 1958</p>
+    </div>
+    
+    </div>
+
+</body>
+</html>
